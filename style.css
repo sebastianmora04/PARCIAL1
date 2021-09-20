@@ -8,7 +8,11 @@ form{
     align-content: center; 
     justify-content: center;
     position: absolute;
-    top: 15%;
+    top: 20%;
+}
+.jun{
+    position: absolute;
+    top: 10%;
 }
 .alinearcenter{
     justify-content: center; 
