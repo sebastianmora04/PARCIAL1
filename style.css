@@ -29,3 +29,23 @@ form{
     pointer-events: none;
     
 }
+.container{
+    width: 100%;
+    margin: auto;
+}
+.ajuste{
+    width: 20%;
+    height: auto;
+    float: left;
+}
+.ajustetable{
+    width: 80%;
+    float: right;
+}
+.verdec{
+    width: 80%;
+    background-color: rgb(52, 160, 52);
+    height: auto;
+    border-radius: 10%;
+    
+}
