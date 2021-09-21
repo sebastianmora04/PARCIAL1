@@ -10,7 +10,7 @@ $(document).ready(function() {
     $('#adicionar').click(function() {
       var g = document.getElementById("gusto").value;
       var i = 1; //contador para asignar id al boton que borrara la fila
-      var fila = '<tr id="row' + i + '"><td>'  + g + '</td><td>0' +  '</td><td><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove">Quitar</button></td></tr>'; //esto seria lo que contendria la fila
+      var fila = '<tr id="row' + i + '"><td id="gusto' + i + '">'  + g + '</td><td id="percent' + i + '" >0' +  '</td><td><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove">Quitar</button></td></tr>'; //esto seria lo que contendria la fila
     
       i++;
     
@@ -29,4 +29,13 @@ $(document).ready(function() {
         $("#adicionados").text("");
         var nFilas = $("#mytable tr").length;
       });
+      function edit_row(i){
+          document.getElementById(i).style.display="none";
+          var g =document.getElementById('gusto'+i);
+          var percent =document.getElementById('percent'+i);
+          var g_data=g.innerHTML;
+          var percent_data=percent.innerHTML;
+          g.innerHTML="<input type='text' id='gusto"+i+"' value='"+g_data+"'>";
+          percent.innerHTML="<input type='number' id='percent"+i+"' value='"+percent_data+"'>";
+      }
     });
